@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Code, GraduationCap, Users, Briefcase } from "lucide-react";
 
 const ServicesSection = () => {
@@ -6,23 +12,21 @@ const ServicesSection = () => {
     {
       icon: Code,
       title: "Software Development",
-      description: "Custom software solutions tailored to your business needs, from web applications to mobile platforms."
+      description:
+        "Custom software solutions tailored to your business needs, from web applications to mobile platforms.",
     },
     {
       icon: GraduationCap,
       title: "Educational Courses",
-      description: "Comprehensive training programs designed to bridge the skills gap and prepare students for the industry."
+      description:
+        "Comprehensive training programs designed to bridge the skills gap and prepare students for the industry.",
     },
     {
       icon: Users,
       title: "Recruitment & Hiring",
-      description: "Connect talented individuals with opportunities that match their skills and career aspirations."
+      description:
+        "Connect talented individuals with opportunities that match their skills and career aspirations.",
     },
-    {
-      icon: Briefcase,
-      title: "Business Consulting",
-      description: "Strategic guidance to help businesses leverage technology and innovation for growth and success."
-    }
   ];
 
   return (
@@ -34,14 +38,15 @@ const ServicesSection = () => {
           </h2>
           <div className="w-24 h-1 accent-gradient mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive solutions to empower your journey, whether you're a student, business, or organization.
+            Comprehensive solutions to empower your journey, whether you're a
+            student, business, or organization.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="hover-lift card-gradient border-0 shadow-card text-center animate-scale-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -49,7 +54,9 @@ const ServicesSection = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl accent-gradient p-4 group-hover:shadow-accent transition-smooth">
                   <service.icon className="w-full h-full text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-bold">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground leading-relaxed">

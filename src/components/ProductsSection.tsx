@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import tarikyIcon from "@/assets/tariky-icon.png";
@@ -15,7 +21,8 @@ const ProductsSection = () => {
           </h2>
           <div className="w-24 h-1 accent-gradient mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Innovative platforms designed to revolutionize the way students and businesses connect and grow.
+            Innovative platforms designed to revolutionize the way students and
+            businesses connect and grow.
           </p>
         </div>
 
@@ -23,7 +30,11 @@ const ProductsSection = () => {
           <Card className="hover-lift card-gradient border-0 shadow-card animate-scale-in">
             <CardHeader className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-background p-4 shadow-soft">
-                <img src={tarikyIcon} alt="Tariky" className="w-full h-full object-contain" />
+                <img
+                  src={tarikyIcon}
+                  alt="Tariky"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <CardTitle className="text-2xl font-bold">Tariky</CardTitle>
               <CardDescription className="text-lg">
@@ -32,28 +43,42 @@ const ProductsSection = () => {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Connect students with career opportunities, internships, and professional development resources. Build your career path with confidence.
+                Connect students with career opportunities, internships, and
+                professional development resources. Build your career path with
+                confidence.
               </p>
-              <Button className="accent-gradient shadow-accent hover-scale group">
-                Explore Tariky
-                <ArrowRight className="ml-2 h-4 w-4 transition-smooth group-hover:translate-x-1" />
-              </Button>
+              <a
+                href="https://tariky.net"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="accent-gradient shadow-accent hover-scale group">
+                  Explore Tariky
+                  <ArrowRight className="ml-2 h-4 w-4 transition-smooth group-hover:translate-x-1" />
+                </Button>
+              </a>
             </CardContent>
           </Card>
 
           <Card className="hover-lift card-gradient border-0 shadow-card animate-scale-in">
             <CardHeader className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-background p-4 shadow-soft">
-                <img src={iescIcon} alt="IESC" className="w-full h-full object-contain" />
+                <img
+                  src={iescIcon}
+                  alt="IESC"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <CardTitle className="text-2xl font-bold">IESC</CardTitle>
               <CardDescription className="text-lg">
-                Community Support Platform
+                Student activity program
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Join a thriving community of students, professionals, and mentors. Collaborate, learn, and grow together through shared experiences.
+                Join a thriving community of students, professionals, and
+                mentors. Collaborate, learn, and grow together through shared
+                experiences.
               </p>
               <IESCDialog>
                 <Button className="accent-gradient shadow-accent hover-scale group">

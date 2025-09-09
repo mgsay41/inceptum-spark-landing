@@ -23,7 +23,7 @@ const PartnersSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-gradient">Partner</span> with
+            <span className="text-gradient">Partner</span> for
           </h2>
           <div className="w-24 h-1 accent-gradient mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
