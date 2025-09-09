@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/1.png";
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           </p>
           <div className="border-t border-background/20 pt-6">
             <p className="text-background/60">
-              © 2024 Inceptum Egypt. All rights reserved.
+              © 2025 Inceptum Egypt. All rights reserved.
             </p>
           </div>
         </div>
