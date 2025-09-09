@@ -17,10 +17,20 @@ const HeroSection = () => {
               Building tools like Tariky & IESC to connect learning, careers, and communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="accent-gradient shadow-accent hover-scale group">
-                Discover Tariky
-                <ArrowRight className="ml-2 h-5 w-5 transition-smooth group-hover:translate-x-1" />
-              </Button>
+              <a
+  href="https://tariky.net"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="accent-gradient shadow-accent hover-scale group"
+  >
+    Discover Tariky
+    <ArrowRight className="ml-2 h-5 w-5 transition-smooth group-hover:translate-x-1" />
+  </Button>
+</a>
+
               <IESCDialog>
                 <Button size="lg" variant="outline" className="hover-lift">
                   Bring IESC to Your Campus
