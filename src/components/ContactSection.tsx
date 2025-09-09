@@ -1,10 +1,52 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const subject = encodeURIComponent("Contact Form Submission");
+      const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}
+      `);
+      
+      const mailtoLink = `mailto:info@inceptum.in?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Message Sent",
+        description: "Your message has been sent successfully!",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 hero-gradient">
       <div className="container mx-auto px-6">
@@ -28,22 +70,11 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Email Us</h3>
-                    <p className="text-muted-foreground">contact@inceptumegypt.com</p>
+                    <p className="text-muted-foreground">info@inceptum.in</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="card-gradient border-0 shadow-card hover-lift">
-                <CardContent className="p-6 flex items-center space-x-4">
-                  <div className="w-12 h-12 accent-gradient rounded-xl p-3">
-                    <Phone className="w-full h-full text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Call Us</h3>
-                    <p className="text-muted-foreground">+20 XXX XXX XXXX</p>
-                  </div>
-                </CardContent>
-              </Card>
 
               <div className="card-gradient p-6 rounded-2xl shadow-card">
                 <h3 className="text-xl font-bold mb-4">Follow Us</h3>
@@ -67,16 +98,38 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-center">Send us a Message</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Input placeholder="Your Name" className="bg-background" />
-                <Input placeholder="Your Email" type="email" className="bg-background" />
-                <Textarea 
-                  placeholder="Your Message" 
-                  className="bg-background min-h-[120px]"
-                />
-                <Button className="w-full accent-gradient shadow-accent hover-scale">
-                  Send Message
-                </Button>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <Input 
+                    placeholder="Your Name" 
+                    className="bg-background"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
+                  <Input 
+                    placeholder="Your Email" 
+                    type="email" 
+                    className="bg-background"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
+                  <Textarea 
+                    placeholder="Your Message" 
+                    className="bg-background min-h-[120px]"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                  />
+                  <Button 
+                    type="submit"
+                    className="w-full accent-gradient shadow-accent hover-scale"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>

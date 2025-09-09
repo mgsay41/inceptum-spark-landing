@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.jpg";
+import IESCDialog from "@/components/IESCDialog";
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,11 @@ const HeroSection = () => {
                 Discover Tariky
                 <ArrowRight className="ml-2 h-5 w-5 transition-smooth group-hover:translate-x-1" />
               </Button>
-              <Button size="lg" variant="outline" className="hover-lift">
-                Join IESC
-              </Button>
+              <IESCDialog>
+                <Button size="lg" variant="outline" className="hover-lift">
+                  Bring IESC to Your Campus
+                </Button>
+              </IESCDialog>
             </div>
           </div>
           

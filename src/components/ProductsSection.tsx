@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import tarikyIcon from "@/assets/tariky-icon.png";
 import iescIcon from "@/assets/iesc-icon.png";
+import IESCDialog from "@/components/IESCDialog";
 
 const ProductsSection = () => {
   return (
@@ -54,10 +55,12 @@ const ProductsSection = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Join a thriving community of students, professionals, and mentors. Collaborate, learn, and grow together through shared experiences.
               </p>
-              <Button className="accent-gradient shadow-accent hover-scale group">
-                Join IESC
-                <ArrowRight className="ml-2 h-4 w-4 transition-smooth group-hover:translate-x-1" />
-              </Button>
+              <IESCDialog>
+                <Button className="accent-gradient shadow-accent hover-scale group">
+                  Bring IESC to Your Campus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-smooth group-hover:translate-x-1" />
+                </Button>
+              </IESCDialog>
             </CardContent>
           </Card>
         </div>

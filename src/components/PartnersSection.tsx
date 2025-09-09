@@ -18,11 +18,11 @@ const PartnersSection = () => {
           </h2>
           <div className="w-24 h-1 accent-gradient mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Collaborating with industry leaders and innovative organizations to create meaningful impact.
+            We've been proud partners with industry leaders and innovative organizations, creating meaningful impact together.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8 max-w-6xl mx-auto justify-items-center">
           {partners.map((partner, index) => (
             <div 
               key={index}
