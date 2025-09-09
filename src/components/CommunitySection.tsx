@@ -8,17 +8,14 @@ const CommunitySection = () => {
     {
       logo: lebaladna,
       title: "Le Baladna",
-      description: "Community support and social impact initiatives",
     },
     {
       logo: aast,
       title: "AAST",
-      description: "Academic partnerships and student development",
     },
     {
       logo: hu,
       title: "HU",
-      description: "Research collaboration and innovation programs",
     },
   ];
 
@@ -76,9 +73,6 @@ const CommunitySection = () => {
                       />
                     </div>
                     <h4 className="font-bold text-base mb-1">{collab.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {collab.description}
-                    </p>
                   </div>
                 ))}
               </CardContent>
