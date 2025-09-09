@@ -77,19 +77,35 @@ Message: ${formData.message}
 
 
               <div className="card-gradient p-6 rounded-2xl shadow-card">
-                <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <div className="w-12 h-12 accent-gradient rounded-xl p-3 hover-scale cursor-pointer">
-                    <Facebook className="w-full h-full text-white" />
-                  </div>
-                  <div className="w-12 h-12 accent-gradient rounded-xl p-3 hover-scale cursor-pointer">
-                    <Instagram className="w-full h-full text-white" />
-                  </div>
-                  <div className="w-12 h-12 accent-gradient rounded-xl p-3 hover-scale cursor-pointer">
-                    <Linkedin className="w-full h-full text-white" />
-                  </div>
-                </div>
-              </div>
+  <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+  <div className="flex space-x-4">
+    <a
+      href="https://www.facebook.com/inceptum.egypt/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 accent-gradient rounded-xl p-3 hover-scale cursor-pointer"
+    >
+      <Facebook className="w-full h-full text-white" />
+    </a>
+    <a
+      href="https://www.instagram.com/inceptum_egypt/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 accent-gradient rounded-xl p-3 hover-scale cursor-pointer"
+    >
+      <Instagram className="w-full h-full text-white" />
+    </a>
+    <a
+      href="https://www.linkedin.com/company/inceptum-egypt"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 accent-gradient rounded-xl p-3 hover-scale cursor-pointer"
+    >
+      <Linkedin className="w-full h-full text-white" />
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
 
